@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { GraphQLClient, gql } from 'graphql-request';
-import BlogCard from './components/BlogCard';
+import BlogCard from '../components/BlogCard';
 
 const graphcms = new GraphQLClient(
   'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/cl9zd2vfn2o8o01tb9ml0h9m0/master'
@@ -41,7 +41,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
-  console.log(posts);
   return (
     <div className={styles.container}>
       <Head>
